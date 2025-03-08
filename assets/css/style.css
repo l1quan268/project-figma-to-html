@@ -1,11 +1,93 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 /* khôi phục cở chữ mặc định theo rem */
-body{
-    font-size: 1.6rem;
+body {
+  font-size: 1.6rem; /*~10px*/
+  font-family: "Poppins", sans-serif;
 }
+/* -------------------------\\common//------------------------- */
+a {
+  text-decoration: none;
+}
+.btn {
+ display: inline-block;
+ min-width: 118px;   
+  padding: 0 16px;
+  line-height: 50px;
+  background: #ffffff;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-align: center;
+  border-radius: 24.5px;
+  background: #171100;
+}
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 48px); /* chừa độ rộng trái phải 24px*/
+  margin-left: auto;
+  margin-right: auto;
+}
+/* -------------------------\\header//------------------------- */
+/* tác động vào class bodyheader có class cha là header sau này sẽ k trùng các class != */
+.header .bodyheader {
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+}
+.header{
+    background: #dd1bccf3;
+}
+.header.fixed{
+    position: sticky;
+    top: -30px;
+}
+/* tác động thẻ ul con của class nav */
+.nav ul {
+  display: flex;
+}
+/* chỉnh nav qua trái thì các button action cũng ảnh hưởng theo */
+.nav {
+  margin-left: auto;
+}
+.nav a {
+  position: relative;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  padding: 8px 21px; /* trên dưới trái phải*/
+}
+
+.nav a:hover,
+.nav li.active a {
+  color: #171100;
+  /* font-weight: 600; */
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.nav li.active a::after {
+  position: absolute;
+  left: 21px;
+  bottom: 6px;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: #171100;
+}
+
+.header .btn-sign-up{
+    min-width: 144px;
+}
+
+.header .action{
+    margin-left: 49px;
+}
+
+
+
+
 
